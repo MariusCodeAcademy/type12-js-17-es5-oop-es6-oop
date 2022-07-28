@@ -20,4 +20,8 @@ export default class User {
     console.log(`${this.fullName()} Monthly salary is: 💸${monthlyPay}`);
     return monthlyPay;
   }
+
+  iAm() {
+    return `As esu ${this.fullName()} objektas ir esu sukurtas ${this.createdAt}`;
+  }
 }

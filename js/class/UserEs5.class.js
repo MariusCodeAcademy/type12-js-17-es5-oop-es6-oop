@@ -12,4 +12,8 @@ export default function UserES5(vardas, pavarde, metinisAtlygis) {
     console.log(nameString);
     return nameString;
   };
+
+  this.iAm = function () {
+    return `As esu ${this.fullName()} objektas ir esu sukurtas ${this.createdAt}`;
+  };
 }
