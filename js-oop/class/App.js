@@ -1,9 +1,25 @@
+import Todo from './Todo.js';
+
 export default class App {
   constructor() {
     this.todoArr = [];
     this.listEl = document.getElementById('list-todo');
     this.inputEl = document.getElementById('new-todo');
     this.addBtnEL = document.getElementById('add-todo');
+    this.initListeners();
+  }
+
+  initListeners() {
+    this.addBtnEL.addEventListener('click', () => {
+      this.handleNewTodo();
+    });
+  }
+
+  handleNewTodo() {
+    const newTodoValue = this.inputEl.value;
+    const todoObj = new Todo(newTodoValue);
+    this.addTodo(todoObj);
+    this.inputEl.value = '';
   }
 
   addTodo(todo) {

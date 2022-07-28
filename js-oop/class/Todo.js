@@ -8,4 +8,8 @@ export default class Todo {
     this.done = false;
     this.timeStamp = new Date().toLocaleTimeString();
   }
+
+  markDone() {
+    this.done = true;
+  }
 }
