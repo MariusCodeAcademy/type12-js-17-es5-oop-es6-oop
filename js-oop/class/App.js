@@ -2,11 +2,19 @@ import Todo from './Todo.js';
 
 export default class App {
   constructor() {
+    console.log('App constructor ran');
     this.todoArr = [];
+
+    this.initHTMLEl();
+    this.initListeners();
+  }
+
+  initHTMLEl() {
+    console.log('App initHTMLEl ran');
+
     this.listEl = document.getElementById('list-todo');
     this.inputEl = document.getElementById('new-todo');
     this.addBtnEL = document.getElementById('add-todo');
-    this.initListeners();
   }
 
   initListeners() {
